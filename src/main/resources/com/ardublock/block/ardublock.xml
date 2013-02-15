@@ -1724,7 +1724,8 @@ BlockGenuses are first loaded.
 	</Image>
       </Images>
     </BlockGenus>
-    
+    <BlockGenus name="test" kind="data" color="0 255 0" initlabel="bg.test"></BlockGenus>
+
   </BlockGenuses>
   
   <BlockFamilies>
@@ -1950,7 +1951,10 @@ BlockGenuses are first loaded.
       <!-- Shapes are automatically loaded as blocks in the Shapes drawer
 	   (see slcodeblocks.ShapeBlocksGenerator for details)  -->
       <!-- Sound blocks reside in the auto-generated String drawer.  
-	   (see slcodeblocks.SoundBlocksGenerator for details)  -->
+	   (see slcodeblocks.SoundBlocksGenerator for details)  --><BlockDrawer
+      	button-color="0 255 0" name="bg.test">
+	<BlockGenusMember>test</BlockGenusMember>
+</BlockDrawer>
     </BlockDrawerSet>
   </BlockDrawerSets>
 
