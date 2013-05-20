@@ -532,6 +532,11 @@ public class TranslatorBlockFactory
 			return new GroveJoyStickButtonBlock(blockId, translator, codePrefix, codeSuffix, label);
 		}
 		
+		//Testing
+		if(blockName.equals("test")){
+			return new TestBlock(blockId, translator, codePrefix, codeSuffix, label);
+		}
+		
 		System.err.println(blockName + " not found!");
 		
 		return null;

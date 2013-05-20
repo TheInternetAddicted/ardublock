@@ -177,6 +177,20 @@ BlockGenuses are first loaded.
       </BlockConnectors>
     </BlockGenus>
     
+     <BlockGenus name="setter_constant_number" kind="command" color="255 0 0" initlabel="bg.setter_constant_number">
+      <description>
+	<text>set a number variable</text>
+      </description>
+      <BlockConnectors>
+	<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
+	  <DefaultArg genus-name="variable_number" label="var name"/>
+	</BlockConnector>
+	<BlockConnector connector-type="number" connector-kind="socket" label="bc.value">
+	  <DefaultArg genus-name="number" label="0"/>
+	</BlockConnector>
+      </BlockConnectors>
+    </BlockGenus>
+    
     <BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="255 0 255">
       <description>
 	<text>
@@ -1708,7 +1722,7 @@ BlockGenuses are first loaded.
       </Images>
     </BlockGenus>
     
-    <BlockGenus name="seeed_joystick_button" kind="data" color="0 255 0" initlabel="bg.seeed_joystick_button">
+    <BlockGenus name="seeed_joystick_button" kind="command" color="0 255 0" initlabel="bg.seeed_joystick_button">
       <description>
 	<text>Read analog value from analog pin</text>
       </description>
@@ -1723,8 +1737,13 @@ BlockGenuses are first loaded.
 	  <FileLocation>com/ardublock/block/seeedstudio/COM90133P.jpg</FileLocation>
 	</Image>
       </Images>
-    </BlockGenus>
-    <BlockGenus name="test" kind="data" color="0 255 0" initlabel="bg.test"></BlockGenus>
+    </BlockGenus><!--Testing blocks-->
+    <BlockGenus name="test" kind="command" color="0 255 0" initlabel="bg.test">
+    	<BlockConnectors>
+    		
+    		<BlockConnector connector-type="number" connector-kind="socket" label="Delay (ms)">
+    		</BlockConnector><BlockConnector connector-type="number" connector-kind="socket" label="Port">
+    		</BlockConnector></BlockConnectors></BlockGenus>
 
   </BlockGenuses>
   
@@ -1827,6 +1846,7 @@ BlockGenuses are first loaded.
 	<BlockGenusMember>variable_number</BlockGenusMember>
 	<BlockGenusMember>variable_digital</BlockGenusMember>
 	<BlockGenusMember>setter_variable_number</BlockGenusMember>
+	<BlockGenusMember>setter_constant_number</BlockGenusMember>
 	<BlockGenusMember>setter_variable_digital</BlockGenusMember>
 	<BlockGenusMember>message</BlockGenusMember>
 	<BlockGenusMember>glue_sn</BlockGenusMember>
